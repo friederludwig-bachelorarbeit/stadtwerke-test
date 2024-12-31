@@ -1,0 +1,30 @@
+{
+  "status_types": [
+    "error",
+    "warning"
+  ],
+  "locations": [
+    "standort_a",
+    "standort_b",
+    "standort_c"
+  ],
+  "machine_types": [
+    "pumpen",
+    "generatoren",
+    "transformatoren"
+  ],
+  "error_types": [
+    "Overheating detected",
+    "Voltage too high",
+    "Cooling failure",
+    "Low pressure",
+    "Overcurrent"
+  ],
+  "contexts": [
+    "Routine maintenance",
+    "High workload",
+    "Ambient temperature increase",
+    "Power outage",
+    "Sensor failure"
+  ]
+}

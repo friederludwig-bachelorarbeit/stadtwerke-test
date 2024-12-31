@@ -1,0 +1,16 @@
+{
+  "status_types": [
+    "error",
+    "value"
+  ],
+  "locations": [
+    "standort_a",
+    "standort_b",
+    "standort_c"
+  ],
+  "machine_types": [
+    "pumpen",
+    "generatoren",
+    "transformatoren"
+  ]
+}

@@ -1,4 +1,6 @@
 import json
+import random
+from datetime import datetime, timedelta, timezone
 
 
 def load_json(file_path):
@@ -11,3 +13,8 @@ def load_json(file_path):
     except json.JSONDecodeError as e:
         print(f"❌ Ungültiges JSON in der Datei: {file_path}")
         raise e
+
+
+def generate_random_timestamp():
+    return (datetime.now(timezone.utc) -
+            timedelta(minutes=random.randint(0, 60))).replace(microsecond=0).isoformat()

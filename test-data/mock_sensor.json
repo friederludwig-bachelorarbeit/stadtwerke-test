@@ -1,12 +1,19 @@
 {
-  "status_types": [
+  "meassurement": [
     "error",
-    "value"
+    "temperature",
+    "pressure"
   ],
   "locations": [
     "standort_a",
     "standort_b",
     "standort_c"
+  ],
+  "error_messages": [
+    "ERROR_642: Overheating detected",
+    "ERROR_955: Voltage too high",
+    "ERROR_175: Cooling failure",
+    "ERROR_045: Low pressure"
   ],
   "machine_types": [
     "pumpen",

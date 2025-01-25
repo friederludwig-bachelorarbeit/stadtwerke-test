@@ -15,6 +15,7 @@ def load_json(file_path):
         raise e
 
 
-def generate_random_timestamp():
-    return (datetime.now(timezone.utc) -
-            timedelta(minutes=random.randint(0, 60))).replace(microsecond=0).isoformat()
+def generate_current_timestamp():
+    now = datetime.now(timezone.utc)
+    # Format für Millisekunden hinzufügen
+    return now.strftime('%Y-%m-%dT%H:%M:%S.%f')[:-3] + 'Z'

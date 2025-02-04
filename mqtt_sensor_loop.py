@@ -7,9 +7,7 @@ MOCK_DATA = "test-data/mock_sensor.json"
 MQTT_BROKER = "localhost"
 MQTT_PORT = 1883
 
-SLEEP_SECONDS_PER_INTERVAL = 0.02
-MIN_MESSAGES_PER_INTERVAL = 1
-MAX_MESSAGES_PER_INTERVAL = 1
+SLEEP_SECONDS_PER_INTERVAL = 0.1
 
 
 def generate_random_payload(data):
@@ -48,22 +46,16 @@ if __name__ == "__main__":
     print("Starting the endless random message sender loop...")
     try:
         while True:
-            # Zufällige Anzahl von Messages
-            num_messages = random.randint(
-                MIN_MESSAGES_PER_INTERVAL,
-                MAX_MESSAGES_PER_INTERVAL)
+            random_message = generate_random_payload(mock_data)
 
-            for _ in range(num_messages):
-                random_message = generate_random_payload(mock_data)
-
-                send_message(
-                    MQTT_BROKER,
-                    MQTT_PORT,
-                    random_message["topic"],
-                    random_message["payload"])
+            send_message(
+                MQTT_BROKER,
+                MQTT_PORT,
+                random_message["topic"],
+                random_message["payload"])
 
             print(
-                f"Sent {num_messages} messages. Waiting for {SLEEP_SECONDS_PER_INTERVAL} second(s)...")
+                f"Sent message. Waiting for {SLEEP_SECONDS_PER_INTERVAL} second(s)...")
 
             sleep(SLEEP_SECONDS_PER_INTERVAL)
 

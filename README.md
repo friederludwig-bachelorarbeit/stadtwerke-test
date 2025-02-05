@@ -1,6 +1,6 @@
 # Testsystem für IoT-Datenerfassungssystem für Stadtwerke
 
-Dieses Projekt dient dazu, das IoT-Datenerfassungssystem für die Stadtwerke zu testen. Es sendet in einem festgelegten Intervall zufällig generierte Nachrichten aus den Daten in test-data/ an das System. Dabei werden sowohl normale Statusmeldungen und Informationen als auch Fehlermeldungen erzeugt.
+Dieses Projekt dient dazu, das IoT-Datenerfassungssystem für die Stadtwerke zu testen. Es sendet in einem festgelegten Intervall zufällig generierte Nachrichten aus den Daten in `test-data/` an das System. Dabei werden sowohl normale Statusmeldungen und Informationen als auch Fehlermeldungen erzeugt.
 
 ##  Installation & Einrichtung
 

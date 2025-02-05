@@ -16,8 +16,6 @@ def generate_random_payload(data):
     machine_type = random.choice(data["machine_types"])
     machine_id = str(random.randint(1012, 1016))
     sensor_id = str(random.randint(205, 206))
-
-    # Zufälliger Zeitstempel (innerhalb der letzten Stunde)
     timestamp = generate_current_timestamp()
 
     # Wert basierend auf dem Meassurement-Typ

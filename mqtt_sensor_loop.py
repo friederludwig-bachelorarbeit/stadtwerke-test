@@ -52,9 +52,6 @@ if __name__ == "__main__":
                 random_message["topic"],
                 random_message["payload"])
 
-            print(
-                f"Sent message. Waiting for {SLEEP_SECONDS_PER_INTERVAL} second(s)...")
-
             sleep(SLEEP_SECONDS_PER_INTERVAL)
 
     except KeyboardInterrupt:
